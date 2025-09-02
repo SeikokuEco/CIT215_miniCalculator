@@ -12,12 +12,14 @@
         let var2 = prompt("Enter second number: ");
         let solution;
 
-        var1 = parseInt(var1);
-        var2 = parseInt(var2);
-
+        // boolean -> checking if they are numbers -> true = true, false = false
         let boolVar = !(isNaN(var1)) && !(isNaN(var2)) ? true : false;
 
         if (boolVar) {
+
+            var1 = parseInt(var1);
+            var2 = parseInt(var2);
+
             switch (operator) {
                 case "+":
                     solution = var1 + var2;
@@ -36,11 +38,11 @@
                     alert("Solution to " + var1 + " / " + var2 + " = " + solution);
                     break;
                 default:
-                    alert("Something went wrong. Please try again later. (not number or bad operator)")
+                    alert("Something went wrong. Please try again later. (bad operator)")
                     break;
             } 
         } else {
-            alert("Something went wrong. Please try again later. (not number or bad operator)")
+            alert("Something went wrong. Please try again later. (not numbers)")
 
         }
         
